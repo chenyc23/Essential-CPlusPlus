@@ -89,7 +89,7 @@ const vector<int> *pseq = seq_ptr(pos);
 ```cpp
 // 保险的做法
 if(seq_ptr){
-		const vector<int> *pseq = seq_ptr(pos);
+	const vector<int> *pseq = seq_ptr(pos);
 }
 ```
 
@@ -105,7 +105,7 @@ const vector<int>* (*seq_array[])(int) = {
 //调用的时候
 int seq_index = 0;
 while(next_seq == true){
-		seq_ptr = seq_array[seq_index++]
+	seq_ptr = seq_array[seq_index++]
 }
 ```
 

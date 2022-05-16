@@ -67,11 +67,11 @@ ofstream outfile("seq_data.txt", ios_base::app);
 
 //进行写入之前，一定要判断文件是否正常打开
 if(!outfile)
-		cerr << "unable to save session data!\n"
+	cerr << "unable to save session data!\n"
 else{
-		outfile << usr_name  << ' '
-					  << num_tries << ' '
-						<< num_right << endl;
+	outfile << usr_name  << ' '
+		    << num_tries << ' '
+			<< num_right << endl;
 }
 ```
 
@@ -111,21 +111,21 @@ if(!infile){
 	//文件打开失败
 }
 else{
-		string name;
-		int nt; //number_tris
-		int nc; //number_correct
-		
-		while(infile >> name){
-				infile >> nt >> nc // 先读string,再读数字
-				if(name == usr_name){
-					// 找到目标人物
-					cout << "Welcome back," << usr_name  
-							 << "your current score is" << nc
-							 << " out of" << nt <<"\nGood Luck!\n";
-					num_tris = nt;
-					num_cor = nc;
-				}
+	string name;
+	int nt; //number_tris
+	int nc; //number_correct
+	
+	while(infile >> name){
+		infile >> nt >> nc // 先读string,再读数字
+		if(name == usr_name){
+			// 找到目标人物
+			cout << "Welcome back," << usr_name  
+				 << "your current score is" << nc
+				 << " out of" << nt <<"\nGood Luck!\n";
+			num_tris = nt;
+			num_cor = nc;
 		}
+	}
 }
 ```
 
